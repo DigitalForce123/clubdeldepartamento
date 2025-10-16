@@ -1,0 +1,672 @@
+/* footer.component.css */
+
+/* Footer principal */
+.footer-custom {
+    background: linear-gradient(135deg, #2d5f3f 0%, #1a3d29 100%);
+    color: white;
+    position: relative;
+    margin-top: 5rem;
+    overflow: hidden;
+}
+
+/* Onda decorativa superior */
+.footer-wave {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(135deg, #2d5f3f 0%, #1a3d29 100%);
+    clip-path: ellipse(70% 60% at 50% 100%);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenido principal del footer */
+.footer-content {
+    padding: 4rem 2rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* Columnas del footer */
+.footer-column {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Títulos de las columnas */
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #7cb342, #558b2f);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(124, 179, 66, 0.4);
+}
+
+.footer-title i {
+    font-size: 20px;
+    color: #7cb342;
+}
+
+/* Texto del footer */
+.footer-text {
+    margin: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Emails del footer */
+.footer-emails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.footer-email {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    word-break: break-all;
+}
+
+.footer-email:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer-email i {
+    color: #7cb342;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Links sociales */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+.social-link i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.social-link.facebook:hover {
+    background: #1877f2;
+    border-color: #1877f2;
+    box-shadow: 0 4px 12px rgba(24, 119, 242, 0.4);
+}
+
+.social-link.instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-color: #dc2743;
+    box-shadow: 0 4px 12px rgba(220, 39, 67, 0.4);
+}
+
+.social-link.youtube:hover {
+    background: #ff0000;
+    border-color: #ff0000;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+}
+
+.social-link.tiktok:hover {
+    background: #000000;
+    border-color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.social-link.whatsapp:hover {
+    background: #25d366;
+    border-color: #25d366;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+/* ESTILOS DEL MAPA */
+.map-container {
+    position: relative;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.map-container:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.map-iframe {
+    display: block;
+    filter: grayscale(0.3) brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.map-container:hover .map-iframe {
+    filter: grayscale(0) brightness(1);
+}
+
+/* Overlay del mapa */
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(45, 95, 63, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.map-container:hover .map-overlay {
+    opacity: 1;
+}
+
+.map-icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+}
+
+.map-icon i {
+    font-size: 30px;
+    color: #2d5f3f;
+}
+
+.map-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* Botón de ver ubicación */
+.map-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #7cb342, #558b2f);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(124, 179, 66, 0.3);
+    margin-top: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.map-button:hover {
+    background: linear-gradient(135deg, #9ccc65, #7cb342);
+    box-shadow: 0 6px 16px rgba(124, 179, 66, 0.5);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.map-button i {
+    font-size: 18px;
+}
+
+/* Barra inferior */
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-bottom-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.developer-link,
+.privacy-link {
+    color: #7cb342;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.developer-link:hover,
+.privacy-link:hover {
+    color: #9ccc65;
+    text-decoration: underline;
+}
+
+/* Iconos sociales flotantes para móvil */
+.social-icons-mobile {
+    display: none;
+}
+
+/* RESPONSIVE - MÓVIL */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 3rem 1rem 2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-title {
+        font-size: 16px;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.8rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    /* Mapa en móvil */
+    .map-container {
+        margin: 1rem 0;
+    }
+
+    .map-iframe {
+        height: 150px;
+    }
+
+    .map-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Mostrar iconos flotantes en móvil */
+    .social-icons-mobile {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .social-icon-mobile {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .social-icon-mobile.facebook {
+        background: #1877f2;
+    }
+
+    .social-icon-mobile.instagram {
+        background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    .social-icon-mobile.youtube {
+        background: #ff0000;
+    }
+
+    .social-icon-mobile.tiktok {
+        background: #000000;
+    }
+
+    .social-icon-mobile.whatsapp {
+        background: #25d366;
+    }
+
+    .social-icon-mobile:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Ocultar links sociales normales en móvil */
+    .social-links {
+        display: none;
+    }
+}
+
+/* TABLETS */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+
+/* BOTÓN FLOTANTE DE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow:
+        0 8px 24px rgba(37, 211, 102, 0.4),
+        0 4px 12px rgba(37, 211, 102, 0.3);
+    z-index: 9999;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    animation: bounceIn 1s ease-out, pulse-shadow 2s infinite;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Animación de entrada */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(10deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* Animación de sombra pulsante */
+@keyframes pulse-shadow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 8px 24px rgba(37, 211, 102, 0.4),
+            0 4px 12px rgba(37, 211, 102, 0.3);
+    }
+
+    50% {
+        box-shadow:
+            0 12px 32px rgba(37, 211, 102, 0.6),
+            0 6px 16px rgba(37, 211, 102, 0.4),
+            0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+}
+
+/* Efecto hover */
+.whatsapp-float:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow:
+        0 12px 32px rgba(37, 211, 102, 0.6),
+        0 6px 16px rgba(37, 211, 102, 0.4);
+    background: linear-gradient(135deg, #2ee476, #25d366);
+}
+
+/* Efecto click */
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+/* Icono dentro del botón */
+.whatsapp-float i {
+    animation: shake 2s infinite;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: rotate(-10deg);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Tooltip del botón */
+.whatsapp-tooltip {
+    position: absolute;
+    right: 80px;
+    background: white;
+    color: #128c7e;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translateX(10px);
+}
+
+/* Flecha del tooltip */
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid white;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+/* Mostrar tooltip al hacer hover */
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* RESPONSIVE - MÓVIL */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 58px;
+        height: 58px;
+        font-size: 28px;
+    }
+
+    /* Ocultar tooltip en móvil */
+    .whatsapp-tooltip {
+        display: none;
+    }
+}
+
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+    }
+}
+
+/* Efecto de onda al hacer hover (opcional) */
+.whatsapp-float::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(37, 211, 102, 0.3);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.whatsapp-float:hover::before {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+}

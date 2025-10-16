@@ -1,0 +1,33 @@
+<!-- navbar.component.html -->
+<nav class="navbar-custom">
+  <div class="navbar-container">
+    <!-- Logo con contenedor de media luna -->
+    <div class="logo-wrapper">
+      <a routerLink="/inicio" class="logo-link">
+        <img src="logo.png " alt="Club Social y Deportivo" class="logo-img">
+      </a>
+    </div>
+
+    <!-- Menú hamburguesa para móvil -->
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="!isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú de navegación -->
+    <div class="navbar-menu" [class.show]="!isCollapsed">
+      <ul class="nav-links">
+        <li><a routerLink="/inicio" routerLinkActive="active"  (click)="closeMenu()">Inicio</a></li>
+        <li><a routerLink="/quienes-somos" routerLinkActive="active" (click)="closeMenu()">Quiénes Somos</a></li>
+        <li><a routerLink="/experiencias" routerLinkActive="active" (click)="closeMenu()">Experiencias</a></li>
+        <li><a routerLink="/actividades" routerLinkActive="active" (click)="closeMenu()">Actividades</a></li>
+        <li><a routerLink="/contacto" routerLinkActive="active" (click)="closeMenu()">Contacto</a></li>
+      </ul>
+
+      <!-- Botón de solicitar información -->
+      <button class="btn-info" (click)="solicitarInformacion()">
+        <i class="bi bi-info-circle"></i>
+        Solicitar más información
+      </button>
+    </div>
+  </div>
+</nav>

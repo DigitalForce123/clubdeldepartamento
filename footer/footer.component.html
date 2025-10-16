@@ -1,0 +1,158 @@
+<!-- footer.component.html -->
+<footer class="footer-custom">
+  <!-- ... todo el contenido existente del footer ... -->
+
+  <!-- Decoración superior ondulada -->
+  <div class="footer-wave"></div>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a 
+    href="https://api.whatsapp.com/send?phone=573142745713&text=Hola%F0%9F%91%8B%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20detalles%20sobre%20el%20Club%20del%20Departamento%F0%9F%8C%B3%3A"
+    target="_blank"
+    class="whatsapp-float"
+    title="Contáctanos por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="whatsapp-tooltip">¿Necesitas ayuda?</span>
+  </a>
+</footer>
+<!-- footer.component.html -->
+
+<footer class="footer-custom">
+  <!-- Contenido principal del footer -->
+  <div class="footer-content">
+    <div class="footer-container">
+      
+      <!-- Columna 1: Dirección con mapa -->
+      <div class="footer-column">
+        <h3 class="footer-title">
+          <i class="bi bi-geo-alt"></i>
+          DIRECCIÓN
+        </h3>
+        <p class="footer-text">Es un placer atenderle</p>
+        <p class="footer-text">KM 14 La Vorágine, Pance, Valle del Cauca, Colombia</p>
+        
+        <!-- Mini mapa -->
+        <div class="map-container">
+          <div class="map-overlay" (click)="openGoogleMaps()">
+            <div class="map-icon">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <p class="map-text">Ver ubicación en Google Maps</p>
+          </div>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.9898765432!2d-76.5872946!3d3.3446832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a267142e54d7%3A0x279f2ce67663a4cd!2sClub%20Social%20y%20Deportivo%20Gobernaci%C3%B3n%20del%20Valle!5e0!3m2!1ses!2sco!4v1234567890"
+            width="100%" 
+            height="180" 
+            style="border:0; border-radius: 12px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="map-iframe">
+          </iframe>
+        </div>
+
+        <!-- Botón para abrir en Google Maps -->
+        <a 
+          href="https://www.google.com/maps/place/Club+Social+y+Deportivo+Gobernaci%C3%B3n+del+Valle/@3.345846,-76.591052,15.75z/data=!4m6!3m5!1s0x8e30a267142e54d7:0x279f2ce67663a4cd!8m2!3d3.3446832!4d-76.5872946!16s%2Fg%2F11bw_46g6k?entry=ttu&g_ep=EgoyMDI1MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          class="map-button">
+          <i class="bi bi-map"></i>
+          Ver ubicación aquí
+        </a>
+      </div>
+
+      <!-- Columna 2: Contáctenos -->
+      <div class="footer-column">
+        <h3 class="footer-title">
+          <i class="bi bi-telephone"></i>
+          CONTÁCTENOS
+        </h3>
+        <p class="footer-text">Es un placer atenderle</p>
+        <p class="footer-text">(602) 5550853 - 5550910 - 555094</p>
+        <p class="footer-text">Línea Comercial: 314 274 5713</p>
+        <p class="footer-text">Línea Administrativa: 320 693 9701</p>
+        <div class="footer-emails">
+          <a href="mailto:secretaria&#64;clubdeldepartamento.com" class="footer-email">
+            <i class="bi bi-envelope"></i>
+            secretaria&#64;clubdeldepartamento.com
+          </a>
+          <a href="mailto:asist.gerencia&#64;clubdeldepartamento.com" class="footer-email">
+            <i class="bi bi-envelope"></i>
+            asist.gerencia&#64;clubdeldepartamento.com
+          </a>
+          <a href="mailto:direccioncomercial&#64;clubdeldepartamento.com" class="footer-email">
+            <i class="bi bi-envelope"></i>
+            direccioncomercial&#64;clubdeldepartamento.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna 3: Redes Sociales -->
+      <div class="footer-column">
+        <h3 class="footer-title">
+          <i class="bi bi-share"></i>
+          SOCIAL
+        </h3>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" class="social-link facebook">
+            <i class="bi bi-facebook"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="social-link instagram">
+            <i class="bi bi-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="social-link youtube">
+            <i class="bi bi-youtube"></i>
+            <span>YouTube</span>
+          </a>
+          <a href="https://tiktok.com" target="_blank" class="social-link tiktok">
+            <i class="bi bi-tiktok"></i>
+            <span>TikTok</span>
+          </a>
+          <a href="https://wa.me/1234567890" target="_blank" class="social-link whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Barra inferior con copyright -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-content">
+      <p class="copyright">
+        ©{{currentYear}} Todos los derechos reservados - Club Social y Deportivo Gobernación del Valle
+      </p>
+      <div class="footer-links">
+        <span>Desarrollado por <a href="#" target="_blank" class="developer-link">Digital Force SAS</a></span>
+        <span class="separator">|</span>
+        <a href="#" class="privacy-link">Políticas de Privacidad</a>
+      </div>
+    </div>
+
+    <!-- Iconos sociales flotantes en móvil -->
+    <div class="social-icons-mobile">
+      <a href="https://facebook.com" target="_blank" class="social-icon-mobile facebook">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" class="social-icon-mobile instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="https://youtube.com" target="_blank" class="social-icon-mobile youtube">
+        <i class="bi bi-youtube"></i>
+      </a>
+      <a href="https://tiktok.com" target="_blank" class="social-icon-mobile tiktok">
+        <i class="bi bi-tiktok"></i>
+      </a>
+      <a href="https://wa.me/1234567890" target="_blank" class="social-icon-mobile whatsapp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Decoración superior ondulada -->
+  <div class="footer-wave"></div>
+</footer>
